@@ -98,6 +98,9 @@ def book_hotel(
             "currency": "USD"
         })
 
+    # Sort the list from cheapest to most expensive
+    booking_details.sort(key=lambda x: x["price_per_night"])
+
     return {
         "full_name": full_name,
         "passport_or_id": passport_or_id,
